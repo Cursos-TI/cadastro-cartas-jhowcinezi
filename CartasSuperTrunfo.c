@@ -15,6 +15,9 @@ int main() {
     float area_size_1;
     float pib_1;
     int tour_att_1;
+    float popl_dens_1;
+    float pib_pcap_1;
+
 
     //Declaração das Variáveis - Carta 2
     char id_2[20];
@@ -24,7 +27,8 @@ int main() {
     float area_size_2;
     float pib_2;
     int tour_att_2;
-
+    float popl_dens_2;
+    float pib_pcap_2;
 
 
     //Menu
@@ -98,6 +102,14 @@ int main() {
     while (getchar() != '\n'); // <-- Limpa o Buffer, pois o ScanF armazena o "Enter" e entende como "\n"
 
 
+   //Cálculo das Informações - Carta 1
+    popl_dens_1 = (float) popl_1 / area_size_1;
+    pib_pcap_1 = (float) pib_1 / popl_1;
+   
+   //Cálculo das Informações - Carta 2
+    popl_dens_2 = (float) popl_2 / area_size_2;
+    pib_pcap_2 = (float) pib_2 / popl_2;
+
 
     //Exibição das Informações - Carta 1
     printf("\n\nCARTA 1\n");
@@ -108,7 +120,9 @@ int main() {
     printf("População da Cidade: %d\n", popl_1);
     printf("Área da Cidade: %.2f", area_size_1); printf(" Km²\n");
     printf("PIB da Cidade: %.2f", pib_1); printf(" Bilhões de Reais\n");
-    printf("Quantidade de Pontos Turísticos da Cidade: %d\n\n", tour_att_1);
+    printf("Quantidade de Pontos Turísticos da Cidade: %d\n", tour_att_1);
+    printf("Densidade Populacional: %.2f", popl_dens_1); printf(" Hab/Km²\n");
+    printf("PIB per Capita: %.2f", pib_pcap_1); printf(" Reais\n\n");
 
 
     //Exibição das Informações - Carta 2
@@ -120,7 +134,9 @@ int main() {
     printf("População da Cidade: %d\n", popl_2);
     printf("Área da Cidade: %.2f", area_size_2); printf(" Km²\n");
     printf("PIB da Cidade: %.2f", pib_2); printf(" Bilhões de Reais\n");
-    printf("Quantidade de Pontos Turísticos da Cidade: %d\n\n", tour_att_2);
+    printf("Quantidade de Pontos Turísticos da Cidade: %d", tour_att_2);
+    printf("Densidade Populacional: %.2f", popl_dens_2); printf(" Hab/Km²\n");
+    printf("PIB per Capita: %.2f", pib_pcap_2); printf(" Reais\n\n");
 
 
 
